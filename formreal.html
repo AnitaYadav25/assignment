@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <style>
+        #main{
+            width: 100%;
+            height: 100%;
+        }
+        #heading{
+            width: 100%;
+            height: 100px;
+        }
+        #form{
+            margin: auto;
+            border: 2px solid grey;
+            width:500px;
+            height:580px;
+
+
+        }
+        #submit{
+            background:darkgray;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+<div id="heading">
+    <span style="color: #00cc66;margin-left:30px"><b>TO THE NEW</b></span>
+    <span style="margin-left:600px;color: #00cc66"><b> Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quick Help</b></span>
+    <hr>
+</div>
+<div id="form">
+    <table>
+        <th style="background:darkgrey;color: white;width:500px;height:60px;margin-top:-10px"> Bug Report</th>
+
+    </table>
+    <form style="margin-left: 20px;">Title*<br>
+    <input type="text" style="width:400px">
+    &nbsp;&nbsp;&nbsp;
+        <br><br>
+    Description*<br>
+    <textarea style="width:410px"></textarea>
+    &nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;<br> <br>Operating System*<br>
+    <select style="background: #00cc66;width:400px">
+        <option value="WindowsXP">WindowsXP</option>
+        <option value="Linux">Linux</option>
+        <option value="Windows10">Windows10</option>
+        <option value="Windows8">Windows8</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;
+        <br><br>
+    Product*<br>
+    <select style="background: #00cc66;width:410px">
+        <option value="WindowsXP">Formoid</option>
+        <option value="Linux">Android</option>
+        <option value="Windows10">Laptop</option>
+        <option value="Windows8">Asus</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;
+    Version:*
+    <input type="text"><br>
+    License:<br>
+    <input type="radio" name="license" value="free">Free ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="license" value="bussiness">Bussiness
+        <br>
+        <br>
+        Severity:<br>
+        <select style="background: #00cc66;width:410px">">
+            <option value="Critical">Critical</option>
+            <option value="Linux">Android</option>
+            <option value="Windows10">Laptop</option>
+            <option value="Windows8">Asus</option>
+        </select>
+            <br>
+        <br>
+            Attachments:<br>
+            <input type="file" value="Choose File"id="choose file"style="width:400px">
+    </form>
+    <div id="submit" style="width:500px;height:60px">
+        <input type="submit" value="Send"style="background: #00cc66;margin-left:410px;margin-top:20px">
+
+    </div>
+
+
+</div>
+
+
+</div>
+</body>
+</html>
