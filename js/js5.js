@@ -61,14 +61,15 @@
 
         }
         for(let i=0;i<duplicate.length;i++) {
+                          console.log("the details of the employee under the age"+duplicate[i]);
             for (j = 0; j < list.length; j++) {
                 if (list[j].age === duplicate[i]) {
-                    store.push(list[j]);
+                    console.log(list[i]);
                 }
 
 
             }
-            console.log(store);
+           
 
         }
     }
