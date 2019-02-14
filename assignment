@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>assignment</title>
+    <style>
+        ul {
+            margin-left: 20px;
+            color: blue;
+        }
+        li {
+            cursor: default;
+        }
+        li.active {
+            background: black;
+            color: white;
+        }
+        span {
+            color:red;
+        }
+
+        #main{
+            background: aqua;
+        }
+        .target{
+            font-size: 10px;
+
+        }
+    </style>
+
+</head>
+<body>
+<h1>Question1</h1>
+<input type="button" id="button1" value="Go to Console">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#button1').click(function () {
+
+            console.log("Hello World");
+        });
+    });
+</script>
+<h2>Question2</h2>
+<div>
+    <p id="test">content of para whose id is test</p> <button id="button22">Add class load </button>
+</div>
+<script>
+$("#b2").click(function(){
+$("#test").addClass("load");
+}
+);
+</script>
+<h2>Question3</h2>
+<div class="abc">
+    Div class name abc
+</div>
+<div class="divnew">
+    Div is of yellow color
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    $("[class$=new]").css({'background':'yellow'});
+</script>
+
+<h2>Question 4</h2>
+<input type="submit" onclick="call()"value="Disable">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    $('input:submit').attr("disabled", 'disabled');
+</script>
+<h2>Question 5</h2>
+<div id="main" style="font-size: 10px">
+    Hello Newers
+    <div class="target">
+        Welcome to To The New
+    </div>
+</div>
+<h2>Question 6 After page load change the HTML of div element with "p" element</h2>
+<input type="button" value="Click Here to see the change" id="b3">
+<p style="background: aqua"class="replaceWith">This is a p element</p>
+<div class="replaceHtml" style="background: yellow">
+    This div is replaced by p...
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#b3").click(function () {
+            $(".replaceHtml").replaceWith("<p>" + $(".replaceHtml").html() + "</p>");
+        });
+    });
+</script>
+<h2> Question 7 Bind a click function to an "click" element and append next "click" next to it.</h2>
+<div id="parent">
+<input type="button" id="b1" value="Click me">
+    </div>
+
+<script>
+    $("#main").children(".target" ).css({'font-size':'30px'});
+</script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#parent").click(function () {
+            $("#parent").append("<br><input type='button' value='click here to add new button'><br>");
+
+
+        });
+    });
+</script>
+<h2> Question 8 Click event not working on element which added dynamicly or via script, make it work using .on method.</h2>
+<div id="parent1">
+    <input type="button" id="b2" value="new element">
+</div>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#parent1").click(function () {
+            $("#parent1").append("<br><input type='button' value='click here to add new button'><br>");
+
+
+        });
+    });
+</script>
+
+<script>
+    function call()
+    {
+        alert("hello");
+    }
+    </script>
+<h2> Question 9 Get dropdown selected value on onchanage event and append in div container</h2>
+
+<h2>Question10 Create a dropdown menu using hover method in jquery</h2>
+
+<select>
+    <option value="qe">QE</option>
+    <option value="jvm">JVM</option>
+    <option value="devops">DEvops</option>
+    <option value="python">Python</option>
+</select>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    var el = $("<p></p>",{
+        id : "new_id",
+        class : "new_class"
+    });
+
+    var dropD = $("<br><select><option value='qe'>QE</option><option value='jvm'>JVM</option><option value='devops'>DEvops</option><option value='Python'>Python</option></select>");
+
+    el.appendTo($("body"));
+
+    $("select").change(function(){
+        $(".appendHere").append($(this).children("option:selected").val()+"<br>");
+    });
+    $(document).ready(function () {
+    $( ".hoverMe" ).hover(
+        function() {
+            $( this ).append( $(dropD) );
+        }
+    );
+    });
+
+
+</script>
+<h2> Question 11 On clicking on "google" tag. It is taking us to google home page. Stop it from happening.</h2>
+<a href="http://google.com">Google</a>
+
+
+<script>
+$(document).ready(function(){
+    $( "a" ).click(function(e) {
+        e.preventDefault();
+    });
+});
+</script>
+<h2>
+    Question 12 We have bind a click funtion to parent div but we want stop it from performing when user clicks on its child li</h2>
+<div class="parents">
+
+    <li class="children">
+
+     this is the content of the first line
+        </li>
+    <li class="children">
+
+        this is the content of the second line
+    </li>
+
+        <input type="button"value="click for parent">
+
+</div>
+<script>
+    $(document).ready(function () {
+        $(".parents").click(function () {
+            $(".children").hide();
+        });
+
+    });
+</script>
+<h2>Question 13 Get the max height of elements using jquery each method</h2>
+<div id="box" style="background: yellow;width: 100px;height: 300px">
+
+
+</div>
+<input type="button" id="button" value=" to check the height">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script>
+
+        $(document).ready(function () {
+            $('#button').click(function () {
+                alert("Height of div: " + $("div").height());
+            });
+        });
+
+</script>
+<h1>Question 14</h1>
+<p>Chagne color of every cell which has numberl larger than 10.</p>
+<table class="td">
+    <tr>
+        <td>1</td>
+        <td>548785</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>4</td>
+        <td>56</td>
+    </tr>
+    <tr>
+        <td>77</td>
+        <td>5</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>1232</td>
+        <td>.22</td>
+        <td>89</td>
+    </tr>
+</table>
+<! Q14>
+<input type="button" value="click me to change" class="button">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+
+    $(document).ready(function(){
+    $( ".button" ).click(function() {
+    $( "td" ).each(function( index, element ) {
+    // element == this
+    var value= Number($( this ).html());
+    if (value > 10) {
+        $( element ).css( "backgroundColor", "yellow" );
+    }
+    });
+    });
+    });
+
+</script>
+
+<h2>Question15</h2>
+<input type="button" value="JSON" class="button2">
+<script>
+    $(document).ready(function() {
+        $(".button2").click(function () {
+            $.ajax({
+                url: "anita.json",
+                dataType: "json",
+                type: "GET",
+                success: function (result) {
+                   console.log(result);
+                }
+            });
+        });
+    });
+
+
+
+</script>
+<h2>Question16</h2>
+<input type="button" value="X" class="button3">
+<script>
+    $(document).ready(function() {
+        $(".button3").click(function () {
+            $.ajax({
+                url: "anita.json",
+                dataType: "json",
+                type: "GET",
+                success: function (result) {
+                    $('.button3').remove();
+                }
+            });
+        });
+    });
+
+
+
+</script>
+
+
+</body>
+</html>
