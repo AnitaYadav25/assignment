@@ -19,7 +19,7 @@ public class Q2 {
         WebDriver driver = new ChromeDriver();
         driver.get("file:///home/anita/Downloads/Registration.html");
         Properties prop=new Properties();
-        File file=new File("/home/anita/IdeaProjects/selinium/src/script/prop.properties");
+        File file=new File("/home/anita/IdeaProjects/selinium/selinium/src/script/prop.properties");
         FileInputStream fileInputStream=new FileInputStream(file);
         prop.load(fileInputStream);
         driver.findElement(By.xpath("//*[@ng-model='FirstName']")).sendKeys(prop.getProperty("FirstName"));
