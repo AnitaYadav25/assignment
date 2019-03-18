@@ -462,8 +462,8 @@ public class Demo {
         select6.selectByVisibleText(properties.getProperty("Pref"));
         driver.findElement(By.xpath("//input[@name='findFlights']")).click();
         driver.findElement(By.xpath("//input[@name='reserveFlights']")).click();
-        driver.findElement(By.xpath("//input[@name='passFirst0']")).sendKeys(" ");
-        driver.findElement(By.xpath("//input[@name='passLast0']")).sendKeys(" ");
+         driver.findElement(By.xpath("//input[@name='passFirst0']")).sendKeys(properties.getProperty("FirstName"));
+        driver.findElement(By.xpath("//input[@name='passLast0']")).sendKeys(properties.getProperty("Lastname"));
         WebElement dropelement7 = driver.findElement(By.xpath("//select[@size='1']"));
         Select select7 = new Select(dropelement7);
         select7.selectByVisibleText(properties.getProperty("Meal"));
