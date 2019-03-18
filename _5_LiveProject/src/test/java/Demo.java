@@ -285,8 +285,8 @@ public class Demo {
         driver.findElement(By.xpath("//*[@name='buyFlights']")).click();
 
 
-        String actual = driver.getCurrentUrl();
-        String expected = "http://newtours.demoaut.com/index.php";
+       String actual = "http://newtours.demoaut.com/mercuryreservation2.php";
+        String expected = driver.getCurrentUrl();
         Assert.assertEquals(actual, expected);
 //       driver.findElement(By.xpath("//input[@name='creditnumber']")).sendKeys(properties.getProperty("cardno"));
 //       driver.findElement(By.xpath("//input[@name='cc_mid_name']")).sendKeys(properties.getProperty("card"));
@@ -377,10 +377,9 @@ public class Demo {
             driver.findElement(By.name("buyFlights")).click();
         }
 
-        String expected_result = driver.getCurrentUrl();
+          String expected_result = driver.getCurrentUrl();
 
-        String actual_result = "http://newtours.demoaut.com/mercurypurchase.php";
-
+        String actual_result = "http://newtours.demoaut.com/mercuryreservation2.php";
 
         Assert.assertEquals(actual_result, expected_result);
 
@@ -484,8 +483,9 @@ public class Demo {
 
         driver.findElement(By.xpath("//input[@name='cc_frst_name']")).sendKeys(properties.getProperty("FirstName"));
         driver.findElement(By.xpath("//input[@name='cc_last_name']")).sendKeys(properties.getProperty("Lastname"));
-        String expected = "http://newtours.demoaut.com/mercuryreservation2.php";
-        String actual = driver.getCurrentUrl();
+         String expected= driver.getCurrentUrl();
+
+        String actual = "http://newtours.demoaut.com/mercuryreservation2.php";
         Assert.assertEquals(actual, expected);
     }
 
