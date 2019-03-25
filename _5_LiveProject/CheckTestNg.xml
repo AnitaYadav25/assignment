@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestAll">
+
+    <test name="Annotations">
+        <classes>
+
+            <class name="BaseClass"></class>
+            <class name="Register"></class>
+            <class name="CorrectDetails"></class>
+            <class name="IncorrectDetails"></class>
+            <class name="WrongDate"></class>
+            <class name="WrongCity"></class>
+
+        </classes>
+    </test>
+</suite>
